@@ -227,15 +227,16 @@ Resources:
             UserData:
                 Fn::Base64: !Sub |
                     #!/bin/bash
-                    apt-get update -y
-                    apt-get install apache2 -y
-                    systemctl start apache2.service
+                    apt-get update -y | echo "Successfully Updated" > /var/log/cloud-init-output.log
+                    apt-get install apache2 -y | echo "Successfully install apache2" > /var/log/cloud-init-output.log
+                    systemctl start apache2.service | echo "Successfully install apache2 Service" > /var/log/cloud-init-output.log
+                    cd /var/www/html
+                    echo "it works! Udagram, Udacity" > index.html | echo "Successfully Run Index.html" > /var/log/cloud-init-output.log  
             ImageId: !Ref UdagramLaunchConfigImageID
-            KeyName: vockey
             IamInstanceProfile: !Ref ProfileWithRolesForOurApp
             SecurityGroups:
                 - Ref: WebServerSecGroup
-            InstanceType: t2.medium
+            InstanceType: t3.medium
             BlockDeviceMappings:
                 - DeviceName: "/dev/sdk"
                   Ebs:
