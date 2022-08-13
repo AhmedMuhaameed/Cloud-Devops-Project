@@ -1,0 +1,30 @@
+[
+	{
+		"ParameterKey": "EnvironmentName",
+		"ParameterValue": "udacityProject"
+	},
+	{
+		"ParameterKey": "UdagramVPC",
+		"ParameterValue": "10.0.0.0/16"
+	},
+	{
+		"ParameterKey": "UdagramPublicSubnet1",
+		"ParameterValue": "10.0.0.0/24"
+	},
+	{
+		"ParameterKey": "UdagramPublicSubnet2",
+		"ParameterValue": "10.0.1.0/24"
+	},
+	{
+		"ParameterKey": "UdagramPrivateSubnet1",
+		"ParameterValue": "10.0.2.0/24"
+	},
+	{
+		"ParameterKey": "UdagramPrivateSubnet2",
+		"ParameterValue": "10.0.3.0/24"
+	},
+	{
+		"ParameterKey": "UdagramLaunchConfigImageID",
+		"ParameterValue": "ami-052efd3df9dad4825"
+	}
+]
